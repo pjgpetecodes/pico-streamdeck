@@ -1,12 +1,13 @@
+# Imports
 import time
 import usb_hid
 import board
 
 from digitalio import DigitalInOut, Direction, Pull
-
 from adafruit_hid.keyboard import Keyboard
 from adafruit_hid.keycode import Keycode
 
+# Define Pins
 btn1_Pin = board.GP0
 btn2_Pin = board.GP1
 btn3_Pin = board.GP2
@@ -18,6 +19,7 @@ btn8_Pin = board.GP7
 btn9_Pin = board.GP8
 btn10_Pin = board.GP9
 
+#Setup all Buttons as Inputs with PullUps
 btn1 = DigitalInOut(btn1_Pin)
 btn1.direction = Direction.INPUT
 btn1.pull = Pull.UP
@@ -58,6 +60,7 @@ btn10 = DigitalInOut(btn10_Pin)
 btn10.direction = Direction.INPUT
 btn10.pull = Pull.UP
 
+# Define HID Key Outputs
 key_Keypad1=Keycode.KEYPAD_ONE
 key_Keypad2=Keycode.KEYPAD_TWO
 key_Keypad3=Keycode.KEYPAD_THREE
@@ -66,50 +69,22 @@ key_Shift = Keycode.SHIFT
 key_Ctrl = Keycode.CONTROL
 keyboard=Keyboard(usb_hid.devices)
 
-time.sleep(2)
-
-
-time.sleep(2)
-keyboard.press(key_Ctrl, key_Keypad2)
-keyboard.release(key_Ctrl, key_Keypad2)
-
-time.sleep(2)
-keyboard.press(key_Ctrl, key_Keypad3)
-keyboard.release(key_Ctrl, key_Keypad3)
-
-time.sleep(2)
-keyboard.press(key_Ctrl, key_Keypad4)
-keyboard.release(key_Ctrl, key_Keypad4)
-
-
- 
+# Loop around and check for key presses
 while True:
     if not btn1.value:
         keyboard.press(key_Ctrl, key_Keypad1)
         keyboard.release(key_Ctrl, key_Keypad1)
-    else:
-        #print("BTN is up")
-        pass
- 
-    if not btn2.value:
+    elif not btn2.value:
         keyboard.press(key_Ctrl, key_Keypad2)
         keyboard.release(key_Ctrl, key_Keypad2)
-    else:
-        #print("BTN is up")
-        pass
-
-    if not btn3.value:
+    elif not btn3.value:
         keyboard.press(key_Ctrl, key_Keypad3)
         keyboard.release(key_Ctrl, key_Keypad3)
-    else:
-        #print("BTN is up")
-        pass
-
-    if not btn4.value:
+    elif not btn4.value:
         keyboard.press(key_Ctrl, key_Keypad4)
         keyboard.release(key_Ctrl, key_Keypad4)
     else:
-        #print("BTN is up")
         pass
 
-    time.sleep(0.1) # sleep for debounce
+    # sleep for debounce
+    time.sleep(0.1) 
