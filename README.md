@@ -33,3 +33,9 @@ Scene 4 =  ctrl + KeyPad 4
 ```
 
 - Press the buttons which are wired up to GPIOs 0,1,2 and 3 to change scenes in OBS!
+
+## Future Planning
+
+- Add LEDs for each button to show which scene is currently selected.
+- 3D print a case and keycaps
+- Look at Bluetooth / WebSockets (Will need add on circuitary!)
