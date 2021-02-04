@@ -10,6 +10,12 @@ https://hridaybarot.home.blog/2021/01/31/using-raspberry-pi-pico-has-hid-device-
 
 I'll be updating this README very soon to show how it all works...
 
+![Pico StreamDeck Build 1](images/build1.jpg "Raspberry Pi Pico StreamDeck Build 1")
+
+## Basic Circuit
+
+![Pico StreamDeck Circuit](images/circuit.png "Raspberry Pi Pico StreamDeck Circuit")
+
 ## Instructions
 
 - Plug in the Raspberry Pi Pico while holding the onboard button.
