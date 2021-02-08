@@ -107,6 +107,13 @@ key_Keypad1=Keycode.KEYPAD_ONE
 key_Keypad2=Keycode.KEYPAD_TWO
 key_Keypad3=Keycode.KEYPAD_THREE
 key_Keypad4=Keycode.KEYPAD_FOUR
+key_Keypad5=Keycode.KEYPAD_FIVE
+key_Keypad6=Keycode.KEYPAD_SIX
+key_Keypad7=Keycode.KEYPAD_SEVEN
+key_Keypad8=Keycode.KEYPAD_EIGHT
+key_Keypad9=Keycode.KEYPAD_NINE
+key_KeypadZero=Keycode.KEYPAD_ZERO
+
 key_Shift = Keycode.SHIFT
 key_Ctrl = Keycode.CONTROL
 keyboard=Keyboard(usb_hid.devices)
@@ -231,43 +238,53 @@ while True:
  
     if not btn1.value:
         keyboard.press(key_Ctrl, key_Keypad1)
+        time.sleep(0.1) 
         keyboard.release(key_Ctrl, key_Keypad1)
         selectedInput = 1
     elif not btn2.value:
         keyboard.press(key_Ctrl, key_Keypad2)
+        time.sleep(0.1) 
         keyboard.release(key_Ctrl, key_Keypad2)
         selectedInput = 2
     elif not btn3.value:
         keyboard.press(key_Ctrl, key_Keypad3)
+        time.sleep(0.1) 
         keyboard.release(key_Ctrl, key_Keypad3)
         selectedInput = 3
     elif not btn4.value:
         keyboard.press(key_Ctrl, key_Keypad4)
+        time.sleep(0.1) 
         keyboard.release(key_Ctrl, key_Keypad4)
         selectedInput = 4
     elif not btn5.value:
-        keyboard.press(key_Ctrl, key_Keypad4)
-        keyboard.release(key_Ctrl, key_Keypad4)
+        keyboard.press(key_Ctrl, key_Keypad5)
+        time.sleep(0.1) 
+        keyboard.release(key_Ctrl, key_Keypad5)
         selectedInput = 5
     elif not btn6.value:
-        keyboard.press(key_Ctrl, key_Keypad4)
-        keyboard.release(key_Ctrl, key_Keypad4)
+        keyboard.press(key_Ctrl, key_Keypad6)
+        time.sleep(0.1) 
+        keyboard.release(key_Ctrl, key_Keypad6)
         selectedInput = 6
     elif not btn7.value:
-        keyboard.press(key_Ctrl, key_Keypad4)
-        keyboard.release(key_Ctrl, key_Keypad4)
+        keyboard.press(key_Ctrl, key_Keypad7)
+        time.sleep(0.1) 
+        keyboard.release(key_Ctrl, key_Keypad7)
         selectedInput = 7
     elif not btn8.value:
-        keyboard.press(key_Ctrl, key_Keypad4)
-        keyboard.release(key_Ctrl, key_Keypad4)
+        keyboard.press(key_Ctrl, key_Keypad8)
+        time.sleep(0.1) 
+        keyboard.release(key_Ctrl, key_Keypad8)
         selectedInput = 8
     elif not btn9.value:
-        keyboard.press(key_Ctrl, key_Keypad4)
-        keyboard.release(key_Ctrl, key_Keypad4)
+        keyboard.press(key_Ctrl, key_Keypad9)
+        time.sleep(0.1) 
+        keyboard.release(key_Ctrl, key_Keypad9)
         selectedInput = 9
     elif not btn10.value:
-        keyboard.press(key_Ctrl, key_Keypad4)
-        keyboard.release(key_Ctrl, key_Keypad4)
+        keyboard.press(key_Ctrl, key_KeypadZero)
+        time.sleep(0.1) 
+        keyboard.release(key_Ctrl, key_KeypadZero)
         selectedInput = 10
     else:
         pass
