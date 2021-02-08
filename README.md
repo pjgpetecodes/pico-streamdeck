@@ -12,9 +12,27 @@ I'll be updating this README very soon to show how it all works...
 
 ![Pico StreamDeck Build 1](images/build1.jpg "Raspberry Pi Pico StreamDeck Build 1")
 
+# In Action
+
+![Pico StreamDeck In Action](images/animation.gif "Raspberry Pi Pico StreamDeck In Action")
+
 ## Basic Circuit
 
 ![Pico StreamDeck Circuit](images/circuit.png "Raspberry Pi Pico StreamDeck Circuit")
+
+# Case
+
+My good friend Clifford Agius and his son are working on a case for this project.
+
+It'll be based on this;
+
+https://www.thingiverse.com/thing:4186055
+
+# CircuitPython HID
+
+You can find some more info about the CircuitPython KeyMappings here;
+
+https://circuitpython.readthedocs.io/projects/hid/en/latest/_modules/adafruit_hid/keycode.html
 
 ## Instructions
 
