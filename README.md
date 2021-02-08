@@ -23,19 +23,25 @@ I'll be updating this README very soon to show how it all works...
 - Copy the `adafruit-circuitpython-raspberry_pi_pico-en_US-6.2.0-beta.1.uf2` file to the Pico
 - The Pico will reboot once it's done with CircuitPython onboard.
 - Copy the `adafruit_hid` folder and the `code.py` file to the Pico
-- In OBS setup Hotkeys for the different scenes
+- In OBS setup Hotkeys for the different scenes by putting your cursor in the Hotkey Box and pressing a button...
 
 ```
 Scene 1 =  ctrl + KeyPad 1
 Scene 2 =  ctrl + KeyPad 2
 Scene 3 =  ctrl + KeyPad 3
 Scene 4 =  ctrl + KeyPad 4
+Scene 5 =  ctrl + KeyPad 5
+Scene 6 =  ctrl + KeyPad 6
+Scene 7 =  ctrl + KeyPad 7
+Scene 8 =  ctrl + KeyPad 8
+Scene 9 =  ctrl + KeyPad 9
+Scene 10 =  ctrl + KeyPad 0
 ```
 
-- Press the buttons which are wired up to GPIOs 0,1,2 and 3 to change scenes in OBS!
+- Press the buttons to change scenes in OBS!
+- Each button will light a corresponding LED to show which Scene is currently active.
 
 ## Future Planning
 
-- Add LEDs for each button to show which scene is currently selected.
 - 3D print a case and keycaps
 - Look at Bluetooth / WebSockets (Will need add on circuitary!)
