@@ -10,11 +10,11 @@ https://hridaybarot.home.blog/2021/01/31/using-raspberry-pi-pico-has-hid-device-
 
 I'll be updating this README very soon to show how it all works...
 
-![Pico StreamDeck Build 1](images/build1.jpg "Raspberry Pi Pico StreamDeck Build 1")
+![Pico StreamDeck Build 1](images/FinishedBuild.jpg "Raspberry Pi Pico StreamDeck Build 1")
 
 # In Action
 
-![Pico StreamDeck In Action](images/animation.gif "Raspberry Pi Pico StreamDeck In Action")
+![Pico StreamDeck In Action](images/demo.gif "Raspberry Pi Pico StreamDeck In Action")
 
 ## Basic Circuit
 
@@ -22,7 +22,13 @@ I'll be updating this README very soon to show how it all works...
 
 # Case
 
-My good friend Clifford Agius and his son are working on a case for this project.
+We now have two different case designs....
+
+Cliff Agius and his son have created a version of the box suited for buttons with holes for LEDs.
+
+I've modified this design to add LEDs above each button;
+
+![Pico StreamDeck Case](images/3dmodel.png "Raspberry Pi Pico StreamDeck Case")
 
 It'll be based on this;
 
