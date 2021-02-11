@@ -1,14 +1,8 @@
-# Raspberry Pi Pico StreamDeck
+# Pico Producer
 
 ## About this Project
 
-This is a work in progress progress to create an OBS StreamDeck using a Raspberry Pi and CircuitPython.
-
-Some of this work is based on a nice blog post by Hriday which shows how to get the Pico working as a HID device, emulating a keyboard;
-
-https://hridaybarot.home.blog/2021/01/31/using-raspberry-pi-pico-has-hid-device-to-control-mouse-and-keyboard/
-
-I'll be updating this README very soon to show how it all works...
+This project is an OBS Controller using a Raspberry Pi Pico and CircuitPython.
 
 ![Pico StreamDeck Build 1](images/FinishedBuild.jpg "Raspberry Pi Pico StreamDeck Build 1")
 
@@ -68,3 +62,9 @@ Scene 10 =  ctrl + KeyPad 0
 ## Future Planning
 
 - Look at Bluetooth / WebSockets (Will need add on circuitary!)
+
+## Notes
+
+the HID control code is based on a nice blog post by Hriday which shows how to get the Pico working as a HID device, emulating a keyboard;
+
+https://hridaybarot.home.blog/2021/01/31/using-raspberry-pi-pico-has-hid-device-to-control-mouse-and-keyboard/
