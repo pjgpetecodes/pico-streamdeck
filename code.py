@@ -1,3 +1,17 @@
+#####################################################
+#                                                   #
+#           Raspberry Pi Pico Producer              #
+#                                                   #
+#         Developed by Pete Gallagher 2021          #
+#                                                   #
+#####################################################
+
+# Author:   Pete Gallagher
+# Version:  1.0
+# Date:     11th February 2021
+# Twitter:  https://www.twitter.com/pete_codes
+# Blog:     https://www.petecodes.co.uk
+
 # Imports
 import time
 import usb_hid
