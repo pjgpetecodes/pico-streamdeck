@@ -67,5 +67,4 @@ Scene 10 =  ctrl + KeyPad 0
 
 ## Future Planning
 
-- 3D print a case and keycaps
 - Look at Bluetooth / WebSockets (Will need add on circuitary!)
