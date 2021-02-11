@@ -28,6 +28,10 @@ It'll be based on this;
 
 https://www.thingiverse.com/thing:4186055
 
+The keycaps are from here;
+
+https://www.thingiverse.com/thing:4186055
+
 # CircuitPython HID
 
 You can find some more info about the CircuitPython KeyMappings here;
