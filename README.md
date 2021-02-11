@@ -24,7 +24,7 @@ I've modified this design to add LEDs above each button;
 
 ![Pico StreamDeck Case](images/3dmodel.png "Raspberry Pi Pico StreamDeck Case")
 
-It'll be based on this;
+It was originally based on this design;
 
 https://www.thingiverse.com/thing:4186055
 
