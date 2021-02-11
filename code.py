@@ -18,6 +18,8 @@ btn7_Pin = board.GP6
 btn8_Pin = board.GP7
 btn9_Pin = board.GP8
 btn10_Pin = board.GP9
+btn11_Pin = board.GP10
+btn12_Pin = board.GP11
 
 led1_pin = board.GP13
 led2_pin = board.GP14
@@ -29,6 +31,8 @@ led7_pin = board.GP19
 led8_pin = board.GP20
 led9_pin = board.GP21
 led10_pin = board.GP22
+led11_pin = board.GP26
+led12_pin = board.GP27
 
 # Setup all Buttons as Inputs with PullUps
 btn1 = DigitalInOut(btn1_Pin)
@@ -71,6 +75,14 @@ btn10 = DigitalInOut(btn10_Pin)
 btn10.direction = Direction.INPUT
 btn10.pull = Pull.UP
 
+btn11 = DigitalInOut(btn11_Pin)
+btn11.direction = Direction.INPUT
+btn11.pull = Pull.UP
+
+btn12 = DigitalInOut(btn12_Pin)
+btn12.direction = Direction.INPUT
+btn12.pull = Pull.UP
+
 # Setup LED Pins
 led1 = DigitalInOut(led1_pin)
 led1.direction = Direction.OUTPUT
@@ -102,6 +114,12 @@ led9.direction = Direction.OUTPUT
 led10 = DigitalInOut(led10_pin)
 led10.direction = Direction.OUTPUT
 
+led11 = DigitalInOut(led11_pin)
+led11.direction = Direction.OUTPUT
+
+led12 = DigitalInOut(led12_pin)
+led12.direction = Direction.OUTPUT
+
 # Define HID Key Outputs
 key_Keypad1=Keycode.KEYPAD_ONE
 key_Keypad2=Keycode.KEYPAD_TWO
@@ -113,6 +131,8 @@ key_Keypad7=Keycode.KEYPAD_SEVEN
 key_Keypad8=Keycode.KEYPAD_EIGHT
 key_Keypad9=Keycode.KEYPAD_NINE
 key_KeypadZero=Keycode.KEYPAD_ZERO
+key_FThirteen=Keycode.F13
+key_FFourteen=Keycode.F14
 
 key_Shift = Keycode.SHIFT
 key_Ctrl = Keycode.CONTROL
@@ -134,6 +154,8 @@ while True:
         led8.value = False
         led9.value = False
         led10.value = False
+        led11.value = False
+        led12.value = False
     elif selectedInput == 2:
         led1.value = False
         led2.value = True
@@ -145,6 +167,8 @@ while True:
         led8.value = False
         led9.value = False
         led10.value = False
+        led11.value = False
+        led12.value = False
     elif selectedInput == 3:
         led1.value = False
         led2.value = False
@@ -156,6 +180,8 @@ while True:
         led8.value = False
         led9.value = False
         led10.value = False
+        led11.value = False
+        led12.value = False
     elif selectedInput == 4:
         led1.value = False
         led2.value = False
@@ -167,6 +193,8 @@ while True:
         led8.value = False
         led9.value = False
         led10.value = False
+        led11.value = False
+        led12.value = False
     elif selectedInput == 5:
         led1.value = False
         led2.value = False
@@ -178,6 +206,8 @@ while True:
         led8.value = False
         led9.value = False
         led10.value = False
+        led11.value = False
+        led12.value = False
     elif selectedInput == 6:
         led1.value = False
         led2.value = False
@@ -189,6 +219,8 @@ while True:
         led8.value = False
         led9.value = False
         led10.value = False
+        led11.value = False
+        led12.value = False
     elif selectedInput == 7:
         led1.value = False
         led2.value = False
@@ -200,6 +232,8 @@ while True:
         led8.value = False
         led9.value = False
         led10.value = False
+        led11.value = False
+        led12.value = False
     elif selectedInput == 8:
         led1.value = False
         led2.value = False
@@ -211,6 +245,8 @@ while True:
         led8.value = True
         led9.value = False
         led10.value = False
+        led11.value = False
+        led12.value = False
     elif selectedInput == 9:
         led1.value = False
         led2.value = False
@@ -222,6 +258,8 @@ while True:
         led8.value = False
         led9.value = True
         led10.value = False
+        led11.value = False
+        led12.value = False
     elif selectedInput == 10:
         led1.value = False
         led2.value = False
@@ -233,6 +271,34 @@ while True:
         led8.value = False
         led9.value = False
         led10.value = True
+        led11.value = False
+        led12.value = False
+    elif selectedInput == 11:
+        led1.value = False
+        led2.value = False
+        led3.value = False
+        led4.value = False
+        led5.value = False
+        led6.value = False
+        led7.value = False
+        led8.value = False
+        led9.value = False
+        led10.value = False
+        led11.value = True
+        led12.value = False
+    elif selectedInput == 12:
+        led1.value = False
+        led2.value = False
+        led3.value = False
+        led4.value = False
+        led5.value = False
+        led6.value = False
+        led7.value = False
+        led8.value = False
+        led9.value = False
+        led10.value = False
+        led11.value = False
+        led12.value = True
     else:
         pass
  
@@ -286,6 +352,16 @@ while True:
         time.sleep(0.1) 
         keyboard.release(key_Ctrl, key_KeypadZero)
         selectedInput = 10
+    elif not btn11.value:
+        keyboard.press(key_Ctrl, key_FThirteen)
+        time.sleep(0.1) 
+        keyboard.release(key_Ctrl, key_FThirteen)
+        selectedInput = 11
+    elif not btn12.value:
+        keyboard.press(key_Ctrl, key_FFourteen)
+        time.sleep(0.1) 
+        keyboard.release(key_Ctrl, key_FFourteen)
+        selectedInput = 12
     else:
         pass
 
