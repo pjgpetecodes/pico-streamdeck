@@ -131,9 +131,9 @@ btn_pins = [
 
 # Define led pins
 led_pins = [
+    board.GP12,
     board.GP13,
     board.GP14,
-    board.GP15,
     board.GP16,
     board.GP17,
     board.GP18,
