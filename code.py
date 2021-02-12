@@ -25,92 +25,94 @@ from adafruit_hid.keycode import Keycode
 keyboard = Keyboard(usb_hid.devices)
 
 # Define HID Key Output Actions
+# Define HID Key Output Actions
 hid_actions = [
     {
         "name": "Scene 1",
         "held": False,
-        "keycode": (Keycode.CONTROL, Keycode.KEYPAD_ONE),
+        "keycode": (Keycode.ALT, Keycode.F1),
         "button": None,
         "led": None,
     },
     {
         "name": "Scene 2",
         "held": False,
-        "keycode": (Keycode.CONTROL, Keycode.KEYPAD_TWO),
+        "keycode": (Keycode.ALT, Keycode.F2),
         "button": None,
         "led": None,
     },
     {
         "name": "Scene 3",
         "held": False,
-        "keycode": (Keycode.CONTROL, Keycode.KEYPAD_THREE),
+        "keycode": (Keycode.ALT, Keycode.F3),
         "button": None,
         "led": None,
     },
     {
         "name": "Scene 4",
         "held": False,
-        "keycode": (Keycode.CONTROL, Keycode.KEYPAD_FOUR),
+        "keycode": (Keycode.ALT, Keycode.F4),
         "button": None,
         "led": None,
     },
     {
         "name": "Scene 5",
         "held": False,
-        "keycode": (Keycode.CONTROL, Keycode.KEYPAD_FIVE),
+        "keycode": (Keycode.ALT, Keycode.F5),
         "button": None,
         "led": None,
     },
     {
         "name": "Scene 6",
         "held": False,
-        "keycode": (Keycode.CONTROL, Keycode.KEYPAD_SIX),
+        "keycode": (Keycode.ALT, Keycode.F6),
         "button": None,
         "led": None,
     },
     {
         "name": "Scene 7",
         "held": False,
-        "keycode": (Keycode.CONTROL, Keycode.KEYPAD_SEVEN),
+        "keycode": (Keycode.ALT, Keycode.F7),
         "button": None,
         "led": None,
     },
     {
         "name": "Scene 8",
         "held": False,
-        "keycode": (Keycode.CONTROL, Keycode.KEYPAD_EIGHT),
+        "keycode": (Keycode.ALT, Keycode.F8),
         "button": None,
         "led": None,
     },
     {
         "name": "Scene 9",
         "held": False,
-        "keycode": (Keycode.CONTROL, Keycode.KEYPAD_NINE),
+        "keycode": (Keycode.ALT, Keycode.F9),
         "button": None,
         "led": None,
     },
     {
         "name": "Scene 10",
         "held": False,
-        "keycode": (Keycode.CONTROL, Keycode.KEYPAD_ZERO),
+        "keycode": (Keycode.ALT, Keycode.F10),
         "button": None,
         "led": None,
     },
     {
         "name": "Scene 11",
         "held": False,
-        "keycode": (Keycode.CONTROL, Keycode.F13),
+        "keycode": (Keycode.CONTROL, Keycode.F11),
         "button": None,
         "led": None,
     },
     {
         "name": "Scene 12",
         "held": False,
-        "keycode": (Keycode.CONTROL, Keycode.F11),
+        "keycode": (Keycode.CONTROL, Keycode.F12),
         "button": None,
         "led": None,
     },
 ]
+
 
 
 # Define button pins
