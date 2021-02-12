@@ -35,9 +35,9 @@ btn10_Pin = board.GP9
 btn11_Pin = board.GP10
 btn12_Pin = board.GP11
 
-led1_pin = board.GP13
-led2_pin = board.GP14
-led3_pin = board.GP15
+led1_pin = board.GP12
+led2_pin = board.GP13
+led3_pin = board.GP14
 led4_pin = board.GP16
 led5_pin = board.GP17
 led6_pin = board.GP18
