@@ -106,7 +106,7 @@ hid_actions = [
     {
         "name": "Scene 12",
         "held": False,
-        "keycode": (Keycode.CONTROL, Keycode.F14),
+        "keycode": (Keycode.CONTROL, Keycode.F11),
         "button": None,
         "led": None,
     },
@@ -170,7 +170,9 @@ while True:
             print(hid_actions[i]["name"])
 
             # send the keyboard commands
-            keyboard.send(*hid_actions[i]["keycode"])
+            keyboard.press(*hid_actions[i]["keycode"])
+            time.sleep(0.001)
+            keyboard.release(*hid_actions[i]["keycode"])
 
             # light up the associated LED
             hid_actions[i]["led"].value = True
