@@ -171,7 +171,6 @@ while True:
 
             # send the keyboard commands
             keyboard.send(*hid_actions[i]["keycode"])
-            time.sleep(0.01)
 
             # light up the associated LED
             hid_actions[i]["led"].value = True
