@@ -82,6 +82,7 @@ It might help to put a large enough delay at the start of your code to give you 
 - Possible Matrix Input (But, I like the simplicity)
 - Possible Resistor Ladder Input (But, again, I like the simplicity)
 - Add Bevels to KeyCaps for stickers
+- Create a PCB
 
 ## Notes
 
