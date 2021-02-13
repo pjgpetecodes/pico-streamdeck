@@ -78,6 +78,10 @@ It might help to put a large enough delay at the start of your code to give you 
 ## Future Planning
 
 - Look at Bluetooth / WebSockets (Will need add on circuitary!)
+- Refactor Code
+- Possible Matrix Input (But, I like the simplicity)
+- Possible Resistor Ladder Input (But, again, I like the simplicity)
+- Add Bevels to KeyCaps for stickers
 
 ## Notes
 
