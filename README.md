@@ -69,9 +69,9 @@ Scene 10 =  ctrl + KeyPad 0
 
 ## Debugging
 
-Circuit Python creates a virtual COM port, so you can use a terminal Program set to 8N1 9600 Baud to debug the code... Just hit the enter key at teh prompt, and the terminal will echo there.
+Circuit Python creates a virtual COM port, so you can use a terminal Program set to 8N1 9600 Baud to debug the code... Just hit the enter key at the prompt, and the terminal will echo there.
 
-It might help to put a large enough delay at the start of your code to give you time to intiialise the terminal.
+It might help to put a large enough delay at the start of your code to give you time to initialise the terminal.
 
 ![Pico Debugging](images/debugging.png "Raspberry Pi Pico Debugging")
 
