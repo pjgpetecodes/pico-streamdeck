@@ -1,192 +1,136 @@
-#####################################################
-#                                                   #
-#           Raspberry Pi Pico Producer              #
-#                                                   #
-#         Developed by Pete Gallagher 2021          #
-#                                                   #
-#####################################################
+# Pico Producer
 
-# Author:   Pete Gallagher
-# Version:  1.0
-# Date:     11th February 2021
-# Twitter:  https://www.twitter.com/pete_codes
-# Blog:     https://www.petecodes.co.uk
+## About this Project
 
-# Imports
-import time
-import usb_hid
-import board
+This project is an OBS Controller using a Raspberry Pi Pico and CircuitPython.
 
-from digitalio import DigitalInOut, Direction, Pull
-from adafruit_hid.keyboard import Keyboard
-from adafruit_hid.keycode import Keycode
+![Pico StreamDeck Build 1](images/finishedbuild3.jpg "Raspberry Pi Pico StreamDeck Build 1")
 
-# Initialize Keybaord
-keyboard = Keyboard(usb_hid.devices)
+# In Action
 
-# Define HID Key Output Actions
-# Define HID Key Output Actions
-hid_actions = [
-    {
-        "name": "Scene 1",
-        "held": False,
-        "keycode": (Keycode.ALT, Keycode.F1),
-        "button": None,
-        "led": None,
-    },
-    {
-        "name": "Scene 2",
-        "held": False,
-        "keycode": (Keycode.ALT, Keycode.F2),
-        "button": None,
-        "led": None,
-    },
-    {
-        "name": "Scene 3",
-        "held": False,
-        "keycode": (Keycode.ALT, Keycode.F3),
-        "button": None,
-        "led": None,
-    },
-    {
-        "name": "Scene 4",
-        "held": False,
-        "keycode": (Keycode.ALT, Keycode.F4),
-        "button": None,
-        "led": None,
-    },
-    {
-        "name": "Scene 5",
-        "held": False,
-        "keycode": (Keycode.ALT, Keycode.F5),
-        "button": None,
-        "led": None,
-    },
-    {
-        "name": "Scene 6",
-        "held": False,
-        "keycode": (Keycode.ALT, Keycode.F6),
-        "button": None,
-        "led": None,
-    },
-    {
-        "name": "Scene 7",
-        "held": False,
-        "keycode": (Keycode.ALT, Keycode.F7),
-        "button": None,
-        "led": None,
-    },
-    {
-        "name": "Scene 8",
-        "held": False,
-        "keycode": (Keycode.ALT, Keycode.F8),
-        "button": None,
-        "led": None,
-    },
-    {
-        "name": "Scene 9",
-        "held": False,
-        "keycode": (Keycode.ALT, Keycode.F9),
-        "button": None,
-        "led": None,
-    },
-    {
-        "name": "Scene 10",
-        "held": False,
-        "keycode": (Keycode.ALT, Keycode.F10),
-        "button": None,
-        "led": None,
-    },
-    {
-        "name": "Scene 11",
-        "held": False,
-        "keycode": (Keycode.CONTROL, Keycode.F11),
-        "button": None,
-        "led": None,
-    },
-    {
-        "name": "Scene 12",
-        "held": False,
-        "keycode": (Keycode.CONTROL, Keycode.F12),
-        "button": None,
-        "led": None,
-    },
-]
+![Pico StreamDeck In Action](images/animation2.gif "Raspberry Pi Pico StreamDeck In Action")
+
+## Basic Circuit
+
+![Pico StreamDeck Circuit](images/circuit.png "Raspberry Pi Pico StreamDeck Circuit")
+
+I've avoid GP15 as it's assigned a USB function... Using GP15 results in the following error at startup;
+
+"ValueError: GP15 in use"
+
+# PCB
+
+Front
+
+![Pico StreamDeck PCB Front](pcb/Images/Front-3d.png "Raspberry Pi Pico StreamDeck PCB - Front")
+
+Back
+
+![Pico StreamDeck PCB Back](pcb/Images/Back-3d.png "Raspberry Pi Pico StreamDeck PCB - Back")
+
+PCB
+
+![Pico StreamDeck PCB PCB](pcb/Images/PCB.png "Raspberry Pi Pico StreamDeck PCB")
+
+# Parts List
 
 
+| Part | Qty | Link |
+|------|-----|------|
+| Cherry MX Keycaps | 12 | https://amzn.to/2Oo1nLP |
+| 3mm LED | 12 | https://amzn.to/3rAqNEV |
+| 220 Ohm 8x Isolated Resistor Pack | 2 | http://bit.ly/picoproducerresistorarray |
+| Raspberry Pi Pico | 1 | http://bit.ly/pimoroni-pico |
+| 20 pin Male PCB Header | 2 | https://amzn.to/3sUr8lN |
 
-# Define button pins
-btn_pins = [
-    board.GP0,
-    board.GP1,
-    board.GP2,
-    board.GP3,
-    board.GP4,
-    board.GP5,
-    board.GP6,
-    board.GP7,
-    board.GP8,
-    board.GP9,
-    board.GP10,
-    board.GP11,
-]
+Notes: 
 
-# Define led pins
-led_pins = [
-    board.GP12,
-    board.GP13,
-    board.GP14,
-    board.GP16,
-    board.GP17,
-    board.GP18,
-    board.GP19,
-    board.GP20,
-    board.GP21,
-    board.GP22,
-    board.GP26,
-    board.GP27,
-]
+- You can feel free to use 12 individual 220 Ohm Resistors - https://amzn.to/3qqaWai
+- If you wire this without a PCB then use the following wire from Pimoroni - http://bit.ly/pimoroni-rainbow-wire
 
-# Setup all Buttons as Inputs with PullUps
-# Setup all LEDs
-for i in range(12):
-    button = DigitalInOut(btn_pins[i])
-    button.direction = Direction.INPUT
-    button.pull = Pull.UP
-    hid_actions[i]["button"] = button
+# Case
 
-    led = DigitalInOut(led_pins[i])
-    led.direction = Direction.OUTPUT
-    hid_actions[i]["led"] = led
+We now have two different case designs....
+
+Cliff Agius and his son have created a version of the box suited for buttons with holes for LEDs.
+
+I've modified this design to add LEDs above each button;
+
+![Pico StreamDeck Case](images/3dmodel.png "Raspberry Pi Pico StreamDeck Case")
+
+It was originally based on this design;
+
+https://www.thingiverse.com/thing:4186055
+
+The keycaps are from here;
+
+https://www.thingiverse.com/thing:4186055
+
+# Assembly Hints
+
+- Insert the 20 Pin PCB headers with teh long legs away from the PCB towards the Pico (Otherwise it'll fowl the faceplate)
+- Solder the 2 Resistor Packs and the Pico PCB Headers first. Then the LEDs and Buttons. Then the Pico.
+- You'll need to trim the legs on the resistor packs which border the three left hand buttons.
+- Insert the LEDs into the PCB, then insert the Buttons into the faceplate and then insert that into the PCB.
+- Push the leds back through the PCB, so they poke into the holes in the faceplate, otherwise they'll be below the faceplate.
+- You'll need to trim the legs on the PCB headers otherwise it'll fowl the bottom of the case.
 
 
-# Loop around and check for key presses
-while True:
+# CircuitPython HID
 
-    for i in range(12):
+You can find some more info about the CircuitPython KeyMappings here;
 
-        # check if button is pressed but make sure it is not held down
-        if not hid_actions[i]["button"].value and not hid_actions[i]["held"]:
+https://circuitpython.readthedocs.io/projects/hid/en/latest/_modules/adafruit_hid/keycode.html
 
-            # print the name of the command for debug purposes
-            print(hid_actions[i]["name"])
+## Instructions
 
-            # send the keyboard commands
-            keyboard.press(*hid_actions[i]["keycode"])
-            time.sleep(0.001)
-            keyboard.release(*hid_actions[i]["keycode"])
+- Plug in the Raspberry Pi Pico while holding the onboard button.
+- Your PC will mount the Pico as a drive
+- Copy the `adafruit-circuitpython-raspberry_pi_pico-en_US-6.2.0-beta.1.uf2` file to the Pico
+- The Pico will reboot once it's done with CircuitPython onboard.
+- Copy the `adafruit_hid` folder and the `code.py` file to the Pico
+- In OBS setup Hotkeys for the different scenes by putting your cursor in the Hotkey Box and pressing a button...
 
-            # light up the associated LED
-            hid_actions[i]["led"].value = True
+```
+Scene 1 =  ctrl + F1
+Scene 2 =  ctrl + F2
+Scene 3 =  ctrl + F3
+Scene 4 =  ctrl + F4
+Scene 5 =  ctrl + F5
+Scene 6 =  ctrl + F6
+Scene 7 =  ctrl + F7
+Scene 8 =  ctrl + F8
+Scene 9 =  ctrl + F9
+Scene 10 =  ctrl + F10
+Scene 11 =  ctrl + F11
+Scene 12 =  ctrl + F12
+```
 
-            # turn off other LEDs that may be on
-            for j in range(12):
-                if i != j:
-                    hid_actions[j]["led"].value = False
+- Press the buttons to change scenes in OBS!
+- Each button will light a corresponding LED to show which Scene is currently active.
 
-            # set the held to True for debounce
-            hid_actions[i]["held"] = True
+## Debugging
 
-        # remove the held indication if it is no longer held
-        elif hid_actions[i]["button"].value and hid_actions[i]["held"]:
-            hid_actions[i]["held"] = False
+Circuit Python creates a virtual COM port, so you can use a terminal Program set to 8N1 9600 Baud to debug the code... Just hit the enter key at teh prompt, and the terminal will echo there.
+
+It might help to put a large enough delay at the start of your code to give you time to initialise the terminal.
+
+![Pico Debugging](images/debugging.png "Raspberry Pi Pico Debugging")
+
+## Future Planning
+
+- Look at Bluetooth / WebSockets (Will need add on circuitary!)
+- Possible Matrix Input (But, I like the simplicity)
+- Possible Resistor Ladder Input (But, again, I like the simplicity)
+
+## Notes
+
+The HID control code is based on a nice blog post by Hriday which shows how to get the Pico working as a HID device, emulating a keyboard;
+
+https://hridaybarot.home.blog/2021/01/31/using-raspberry-pi-pico-has-hid-device-to-control-mouse-and-keyboard/
+
+## Thanks
+
+Thanks to Cliff Agius and his son for the original 3d Files.
+Thanks to John Furcean for refactoring the code.
+Thanks to frankalicious for som spelling checks. 
