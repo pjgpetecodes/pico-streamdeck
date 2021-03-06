@@ -18,6 +18,21 @@ I've avoid GP15 as it's assigned a USB function... Using GP15 results in the fol
 
 "ValueError: GP15 in use"
 
+# PCB
+
+Front
+
+![Pico StreamDeck PCB Front](pcb/Images/Front-3d.png "Raspberry Pi Pico StreamDeck PCB - Front")
+
+Back
+
+![Pico StreamDeck PCB Back](pcb/Images/Back-3d.png "Raspberry Pi Pico StreamDeck PCB - Back")
+
+PCB
+
+![Pico StreamDeck PCB PCB](pcb/Images/PCB.png "Raspberry Pi Pico StreamDeck PCB")
+
+
 # Case
 
 We now have two different case designs....
@@ -52,16 +67,18 @@ https://circuitpython.readthedocs.io/projects/hid/en/latest/_modules/adafruit_hi
 - In OBS setup Hotkeys for the different scenes by putting your cursor in the Hotkey Box and pressing a button...
 
 ```
-Scene 1 =  ctrl + KeyPad 1
-Scene 2 =  ctrl + KeyPad 2
-Scene 3 =  ctrl + KeyPad 3
-Scene 4 =  ctrl + KeyPad 4
-Scene 5 =  ctrl + KeyPad 5
-Scene 6 =  ctrl + KeyPad 6
-Scene 7 =  ctrl + KeyPad 7
-Scene 8 =  ctrl + KeyPad 8
-Scene 9 =  ctrl + KeyPad 9
-Scene 10 =  ctrl + KeyPad 0
+Scene 1 =  ctrl + F1
+Scene 2 =  ctrl + F2
+Scene 3 =  ctrl + F3
+Scene 4 =  ctrl + F4
+Scene 5 =  ctrl + F5
+Scene 6 =  ctrl + F6
+Scene 7 =  ctrl + F7
+Scene 8 =  ctrl + F8
+Scene 9 =  ctrl + F9
+Scene 10 =  ctrl + F10
+Scene 11 =  ctrl + F11
+Scene 12 =  ctrl + F12
 ```
 
 - Press the buttons to change scenes in OBS!
@@ -78,14 +95,11 @@ It might help to put a large enough delay at the start of your code to give you 
 ## Future Planning
 
 - Look at Bluetooth / WebSockets (Will need add on circuitary!)
-- Refactor Code
 - Possible Matrix Input (But, I like the simplicity)
 - Possible Resistor Ladder Input (But, again, I like the simplicity)
-- Add Bevels to KeyCaps for stickers
-- Create a PCB
 
 ## Notes
 
-the HID control code is based on a nice blog post by Hriday which shows how to get the Pico working as a HID device, emulating a keyboard;
+The HID control code is based on a nice blog post by Hriday which shows how to get the Pico working as a HID device, emulating a keyboard;
 
 https://hridaybarot.home.blog/2021/01/31/using-raspberry-pi-pico-has-hid-device-to-control-mouse-and-keyboard/

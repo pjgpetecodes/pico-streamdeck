@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "PicoProducer-eagle-import")(type "Legacy")(uri "${KIPRJMOD}/PicoProducer-eagle-import.lib")(options "")(descr ""))
+  (lib (name "PicoProducer-rescue")(type "Legacy")(uri "${KIPRJMOD}/PicoProducer-rescue.lib")(options "")(descr ""))
+)
