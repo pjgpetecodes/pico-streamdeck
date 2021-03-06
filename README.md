@@ -128,3 +128,9 @@ It might help to put a large enough delay at the start of your code to give you 
 The HID control code is based on a nice blog post by Hriday which shows how to get the Pico working as a HID device, emulating a keyboard;
 
 https://hridaybarot.home.blog/2021/01/31/using-raspberry-pi-pico-has-hid-device-to-control-mouse-and-keyboard/
+
+## Thanks
+
+Thanks to Cliff Agius and his son for the original 3d Files.
+Thanks to John Furcean for refactoring the code.
+Thanks to frankalicious for som spelling checks. 
