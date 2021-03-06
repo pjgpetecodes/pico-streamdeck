@@ -4,11 +4,11 @@
 
 This project is an OBS Controller using a Raspberry Pi Pico and CircuitPython.
 
-![Pico StreamDeck Build 1](images/case.jpg "Raspberry Pi Pico StreamDeck Build 1")
+![Pico StreamDeck Build 1](images/finishedbuild3.jpg "Raspberry Pi Pico StreamDeck Build 1")
 
 # In Action
 
-![Pico StreamDeck In Action](images/demo.gif "Raspberry Pi Pico StreamDeck In Action")
+![Pico StreamDeck In Action](images/animation2.gif "Raspberry Pi Pico StreamDeck In Action")
 
 ## Basic Circuit
 
