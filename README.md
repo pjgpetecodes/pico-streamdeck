@@ -32,6 +32,21 @@ PCB
 
 ![Pico StreamDeck PCB PCB](pcb/Images/PCB.png "Raspberry Pi Pico StreamDeck PCB")
 
+# Parts List
+
+
+| Part | Qty | Link |
+|------|-----|------|
+| Cherry MX Keycaps | 12 | https://amzn.to/2Oo1nLP |
+| 3mm LED | 12 | https://amzn.to/3rAqNEV |
+| 220 Ohm 8x Isolated Resistor Pack | 2 | http://bit.ly/picoproducerresistorarray |
+| Raspberry Pi Pico | 1 | http://bit.ly/pimoroni-pico |
+| 20 pin Male PCB Header | 2 | https://amzn.to/3sUr8lN |
+
+Notes: 
+
+- You can feel free to use 12 individual 220 Ohm Resistors - https://amzn.to/3qqaWai
+- If you wire this without a PCB then use the following wire from Pimoroni - http://bit.ly/pimoroni-rainbow-wire
 
 # Case
 
@@ -50,6 +65,16 @@ https://www.thingiverse.com/thing:4186055
 The keycaps are from here;
 
 https://www.thingiverse.com/thing:4186055
+
+# Assembly Hints
+
+- Insert the 20 Pin PCB headers with teh long legs away from the PCB towards the Pico (Otherwise it'll fowl the faceplate)
+- Solder the 2 Resistor Packs and the Pico PCB Headers first. Then the LEDs and Buttons. Then the Pico.
+- You'll need to trim the legs on the resistor packs which border the three left hand buttons.
+- Insert the LEDs into the PCB, then insert the Buttons into the faceplate and then insert that into the PCB.
+- Push the leds back through the PCB, so they poke into the holes in the faceplate, otherwise they'll be below the faceplate.
+- You'll need to trim the legs on the PCB headers otherwise it'll fowl the bottom of the case.
+
 
 # CircuitPython HID
 
