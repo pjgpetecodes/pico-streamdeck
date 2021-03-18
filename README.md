@@ -68,7 +68,7 @@ https://www.thingiverse.com/thing:4186055
 
 # Assembly Hints
 
-- Insert the 20 Pin PCB headers with teh long legs away from the PCB towards the Pico (Otherwise it'll fowl the faceplate)
+- Insert the 20 Pin PCB headers with the long legs away from the PCB towards the Pico (Otherwise it'll fowl the faceplate)
 - Solder the 2 Resistor Packs and the Pico PCB Headers first. Then the LEDs and Buttons. Then the Pico.
 - You'll need to trim the legs on the resistor packs which border the three left hand buttons.
 - Insert the LEDs into the PCB, then insert the Buttons into the faceplate and then insert that into the PCB.
@@ -133,4 +133,4 @@ https://hridaybarot.home.blog/2021/01/31/using-raspberry-pi-pico-has-hid-device-
 
 Thanks to Cliff Agius and his son for the original 3d Files.
 Thanks to John Furcean for refactoring the code.
-Thanks to frankalicious for som spelling checks. 
+Thanks to frankalicious for fixing some spelling checks. 
