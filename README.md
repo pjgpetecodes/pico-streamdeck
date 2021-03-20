@@ -42,6 +42,10 @@ PCB
 
 ![Pico StreamDeck PCB PCB](pcb/Images/PCB.png "Raspberry Pi Pico StreamDeck PCB")
 
+You can have your PCB made at OSH Park here;
+
+https://oshpark.com/shared_projects/UNP0qi2U
+
 # Parts List
 
 
@@ -77,6 +81,10 @@ https://www.thingiverse.com/thing:4186055
 The keycaps are from here;
 
 https://www.thingiverse.com/thing:4186055
+
+You can find the project on Thingiverse here;
+
+https://www.thingiverse.com/thing:4800253
 
 # Assembly Hints
 
