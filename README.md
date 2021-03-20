@@ -10,6 +10,16 @@ This project is an OBS Controller using a Raspberry Pi Pico and CircuitPython.
 
 ![Pico StreamDeck In Action](images/animation2.gif "Raspberry Pi Pico StreamDeck In Action")
 
+# Featured
+
+The Raspberry Pi Pico Producer has been featured in the following publications;
+
+- Raspberry Pi Website: https://www.raspberrypi.org/documentation/rp2040/getting-started/
+- Hackster: https://www.hackster.io/news/pete-gallagher-s-raspberry-pi-pico-stream-deck-aids-obs-work-via-a-smart-circuitpython-script-0df423724379
+- Hackster: https://www.hackster.io/news/use-a-raspberry-pi-pico-to-build-your-own-affordable-stream-deck-a0ad237f0d25
+- Hackaday: https://hackaday.com/2021/02/23/lighted-raspberry-pico-stream-deck-is-easy-as-pi/
+- OSH Park: https://blog.oshpark.com/2021/03/08/obs-controller-using-circuitpython-on-rpi-pico/
+
 ## Basic Circuit
 
 ![Pico StreamDeck Circuit](images/circuit.png "Raspberry Pi Pico StreamDeck Circuit")
