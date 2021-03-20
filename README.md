@@ -47,11 +47,13 @@ PCB
 
 | Part | Qty | Link |
 |------|-----|------|
+| PCB | 1 | https://oshpark.com/shared_projects/UNP0qi2U |
 | Cherry MX Keycaps | 12 | https://amzn.to/2Oo1nLP |
 | 3mm LED | 12 | https://amzn.to/3rAqNEV |
 | 220 Ohm 8x Isolated Resistor Pack | 2 | http://bit.ly/picoproducerresistorarray |
 | Raspberry Pi Pico | 1 | http://bit.ly/pimoroni-pico |
 | 20 pin Male PCB Header | 2 | https://amzn.to/3sUr8lN |
+| 3D Printed Case | 1 | https://www.thingiverse.com/thing:4800253 |
 
 Notes: 
 
